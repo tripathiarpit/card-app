@@ -1,0 +1,19 @@
+Cards Microservice (Manages credit & debit card operations)
+Card Issuance & Management
+POST /cards – Apply for a new credit/debit card.
+GET /cards/{customerId} – Get all cards for a customer.
+PUT /cards/{cardId} – Update card settings (e.g., transaction limits).
+DELETE /cards/{cardId} – Block or cancel a card.
+
+Card Transactions & Billing
+GET /cards/{cardId}/transactions?fromDate={}&toDate={} – Fetch card transactions.
+GET /cards/{cardId}/statement – Get monthly card statement.
+POST /cards/{cardId}/payment – Pay outstanding card bill.
+GET /cards/{cardId}/outstanding-balance – Get pending amount.
+POST /cards/{cardId}/limit-increase – Request a credit limit increase.
+POST /cards/{cardId}/set-pin – Set/reset card PIN.
+
+Card Offers & Rewards
+GET /cards/{cardId}/offers – Fetch available offers.
+GET /cards/{cardId}/rewards – View reward points.
+POST /cards/{cardId}/redeem-rewards – Redeem reward points.
